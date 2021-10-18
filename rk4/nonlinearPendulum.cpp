@@ -95,7 +95,6 @@ int main(){
     //start rk4 threads
     unsigned counter = 0;
     for(int i = 0; i < NUM_THREADS; i++){
-        //DV = inits;
         cout << "starting thread " << 1+counter++ << "/" << smallestSplit-1;
         cout <<  " for stepsize: " << h[i] << endl;
         pthread_create(&threads[i], NULL, rk4Worker, (void *)&args[i]);
